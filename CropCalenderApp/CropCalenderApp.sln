@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CropCalenderApp", "CropCalenderApp\CropCalenderApp.csproj", "{51B93532-ECB2-4FB1-BC52-4E961D58C5FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CropCalender.Models", "CropCalender.Models\CropCalender.Models.csproj", "{3138CD63-A078-4008-B053-E10AE22EFBF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CropCalender.BLL", "CropCalender.BLL\CropCalender.BLL.csproj", "{CB0E287E-5DAF-4331-B96C-392645FE8105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CropCalender.Repositories", "CropCalender.Repositories\CropCalender.Repositories.csproj", "{B737AAAA-908A-4E74-B2D8-EDA0C8E365F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51B93532-ECB2-4FB1-BC52-4E961D58C5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B93532-ECB2-4FB1-BC52-4E961D58C5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B93532-ECB2-4FB1-BC52-4E961D58C5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B93532-ECB2-4FB1-BC52-4E961D58C5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3138CD63-A078-4008-B053-E10AE22EFBF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3138CD63-A078-4008-B053-E10AE22EFBF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3138CD63-A078-4008-B053-E10AE22EFBF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3138CD63-A078-4008-B053-E10AE22EFBF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB0E287E-5DAF-4331-B96C-392645FE8105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB0E287E-5DAF-4331-B96C-392645FE8105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB0E287E-5DAF-4331-B96C-392645FE8105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB0E287E-5DAF-4331-B96C-392645FE8105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B737AAAA-908A-4E74-B2D8-EDA0C8E365F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B737AAAA-908A-4E74-B2D8-EDA0C8E365F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B737AAAA-908A-4E74-B2D8-EDA0C8E365F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B737AAAA-908A-4E74-B2D8-EDA0C8E365F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
