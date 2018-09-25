@@ -11,7 +11,7 @@ namespace CropCalender.Models.EntityModels
     [Table("SubDistrict")]
     public class SubDistrict
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [StringLength(50)]
@@ -20,7 +20,8 @@ namespace CropCalender.Models.EntityModels
         [StringLength(150)]
         public string SubDistrictName { get; set; }
 
-        public int? DistrictId { get; set; }
-        public virtual District District { get; set; }
+        [StringLength(50)]
+        public string DistBbsId { get; set; }
+
     }
 }

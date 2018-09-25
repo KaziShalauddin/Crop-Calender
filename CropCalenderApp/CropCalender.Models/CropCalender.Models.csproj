@@ -69,13 +69,21 @@
     <Compile Include="EntityModels\Season.cs" />
     <Compile Include="EntityModels\SubDistrict.cs" />
     <Compile Include="EntityModels\SubDistrictAdvice.cs" />
-    <Compile Include="EntityModels\Test.cs" />
+    <Compile Include="Migrations\201809251526487_Initial_Create.cs" />
+    <Compile Include="Migrations\201809251526487_Initial_Create.Designer.cs">
+      <DependentUpon>201809251526487_Initial_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809251526487_Initial_Create.resx">
+      <DependentUpon>201809251526487_Initial_Create.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

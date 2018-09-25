@@ -11,7 +11,7 @@ namespace CropCalender.Models.EntityModels
     [Table("District")]
     public class District
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(Order = 0)]
         public int Id { get; set; }
 
@@ -23,7 +23,10 @@ namespace CropCalender.Models.EntityModels
         [StringLength(150)]
         public string DistrictName { get; set; }
 
-        public int? AreaId { get; set; }
-        public virtual Area Area { get; set; }
+        //public int? AreaId { get; set; }
+        //public virtual Area Area { get; set; }
+
+        [StringLength(150)]
+        public string AreaBbsId { get; set; }
     }
 }

@@ -170,8 +170,14 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AreasController.cs" />
+    <Compile Include="Controllers\CropsController.cs" />
+    <Compile Include="Controllers\CropVarietiesController.cs" />
+    <Compile Include="Controllers\DistrictsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LandTypesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SeasonsController.cs" />
+    <Compile Include="Controllers\SubDistrictsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -279,6 +285,36 @@
     <Content Include="Views\Areas\Edit.cshtml" />
     <Content Include="Views\Areas\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Districts\Create.cshtml" />
+    <Content Include="Views\Districts\Delete.cshtml" />
+    <Content Include="Views\Districts\Details.cshtml" />
+    <Content Include="Views\Districts\Edit.cshtml" />
+    <Content Include="Views\Districts\Index.cshtml" />
+    <Content Include="Views\SubDistricts\Create.cshtml" />
+    <Content Include="Views\SubDistricts\Delete.cshtml" />
+    <Content Include="Views\SubDistricts\Details.cshtml" />
+    <Content Include="Views\SubDistricts\Edit.cshtml" />
+    <Content Include="Views\SubDistricts\Index.cshtml" />
+    <Content Include="Views\LandTypes\Create.cshtml" />
+    <Content Include="Views\LandTypes\Delete.cshtml" />
+    <Content Include="Views\LandTypes\Details.cshtml" />
+    <Content Include="Views\LandTypes\Edit.cshtml" />
+    <Content Include="Views\LandTypes\Index.cshtml" />
+    <Content Include="Views\Seasons\Create.cshtml" />
+    <Content Include="Views\Seasons\Delete.cshtml" />
+    <Content Include="Views\Seasons\Details.cshtml" />
+    <Content Include="Views\Seasons\Edit.cshtml" />
+    <Content Include="Views\Seasons\Index.cshtml" />
+    <Content Include="Views\Crops\Create.cshtml" />
+    <Content Include="Views\Crops\Delete.cshtml" />
+    <Content Include="Views\Crops\Details.cshtml" />
+    <Content Include="Views\Crops\Edit.cshtml" />
+    <Content Include="Views\Crops\Index.cshtml" />
+    <Content Include="Views\CropVarieties\Create.cshtml" />
+    <Content Include="Views\CropVarieties\Delete.cshtml" />
+    <Content Include="Views\CropVarieties\Details.cshtml" />
+    <Content Include="Views\CropVarieties\Edit.cshtml" />
+    <Content Include="Views\CropVarieties\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
