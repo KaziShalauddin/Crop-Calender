@@ -1,0 +1,66 @@
+@import url('https://fonts.maateen.me/charu-chandan-3d/font.css');
+@import url('https://fonts.maateen.me/charukola-ultra-light/font.css');
+
+body p{
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-default{
+  border-top: 3px solid #7cc576; 
+  border-bottom: 3px solid #7cc576;
+  background-color: #00746b;
+  
+}
+.navbar-default .navbar-nav>li>a{
+  color:white;
+  font-family:"SolaimanLipiNormal" !important;
+  font-size: 18px;
+}
+.navbar>.container .navbar-brand, 
+.navbar>.container-fluid .navbar-brand{
+   color:white;
+   border-left: 3px solid #7cc576;
+   border-right: 3px solid #7cc576;
+}
+.navbar-nav>li{
+  border-right: 3px solid #7cc576;
+}
+
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover{
+  color:skyblue;
+}
+.navbar-nav>li:hover{
+  background: green;
+}
+.navbar-right{
+  border-left: 3px solid #7cc576;
+  border-right: 3px solid #7cc576;
+}
+
+.navbar-form .form-control{
+  color: #fff;
+  border-radius: 0px;
+  /*padding: 16px 10px;*/
+  background-color: #3bb91903;
+  border: 1px solid #7cc576;
+  font-family:"SolaimanLipiNormal" !important;
+  font-size: 18px;
+}
+.top-search{
+    color: #fff;
+    background-color: #fff0;
+    border-color: #7cc576;
+    border-radius: 0px;
+    font-family:"SolaimanLipiNormal" !important;
+    /*font-size: 16px;*/
+}    
+.top-search:hover{
+  background: green;
+  color:skyblue;
+}
+.home-png{
+  margin-top: -15px;
+  max-height: 50px;
+}

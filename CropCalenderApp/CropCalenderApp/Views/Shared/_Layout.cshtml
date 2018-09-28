@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Calendar</title>
+    <meta name="description" content="Crop Calendar Bangladesh">
+    <meta name="keywords" content="Crop Calendar">
+    <meta name="author" content="Md Khalid Hossain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/dist/images/bd_logo.png" type="image/png">
+    <link rel="stylesheet" href="~/dist/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/dist/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/dist/lib/animate-css/animate.css">
+
+    <link rel="stylesheet" type="text/css" href="~/dist/css/bangla.css">
+    <link rel="stylesheet" type="text/css" href="~/dist/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="~/dist/css/style.css">
+</head>
+<body>
+
+    <section>
+        <div>
+            <img class="img-responsive" src="~/dist/images/top02.jpg">
+        </div>
+    </section>
+    <section>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img class="img-responsive home-png" src="~/dist/images/home.png"></a>
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">আমাদের কথা</a></li>
+                        <li><a href="#">উদ্দেশ্য <span class="sr-only">(current)</span></a></li>
+
+                        <li><a href="#">বাস্তবায়ন কৌশল</a></li>
+                        <li><a href="#">ফলাফল</a></li>
+                        <!-- <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                          </ul>
+                        </li> -->
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="অনুসন্ধান">
+                            </div>
+                            <button type="submit" class="btn btn-default top-search">অনুসন্ধান</button>
+                        </form>
+                        <!-- <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </section>
+
+    <section>
+        <div class="top-bg">
+            <div class="container">
+                <h2 class="top-title-2">পরামশ সংগ্রহ</h2>
+            </div>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="@Url.Action("Index", "Areas")"> Areas</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", "Districts")">Districts</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", "SubDistricts")">SubDistricts</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", "Crops")">Crops</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", "CropVarieties")">CropVarieties</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", "LandTypes")">LandTypes</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", "Seasons")">Seasons</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                @RenderBody()
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="footer">
+            <div class="container">
+                <ul class="icon">
+                    <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="~/dist/lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="~/dist/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/dist/js/myjs.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
