@@ -73,6 +73,10 @@
     <Compile Include="Migrations\201809251526487_Initial_Create.Designer.cs">
       <DependentUpon>201809251526487_Initial_Create.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809301246355_CropAdviceTable_SubDistrictId_Added.cs" />
+    <Compile Include="Migrations\201809301246355_CropAdviceTable_SubDistrictId_Added.Designer.cs">
+      <DependentUpon>201809301246355_CropAdviceTable_SubDistrictId_Added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -83,6 +87,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201809251526487_Initial_Create.resx">
       <DependentUpon>201809251526487_Initial_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809301246355_CropAdviceTable_SubDistrictId_Added.resx">
+      <DependentUpon>201809301246355_CropAdviceTable_SubDistrictId_Added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

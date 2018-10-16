@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CropCalenderApp.ViewModels.CropAdviceListVm>
+@{
+
+    var loop = 0;
+}
+@using (Ajax.BeginForm( new AjaxOptions { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "adviceListContainer" }))
+{
+    if (Model.Any())
+    {
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <th>
+
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CropName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CropVarieties)
+                    </th>
+
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.CheckBoxFor(modelItem => Model.ToList()[loop].IsSelected)
+                            @Html.HiddenFor(modelItem => Model.ToList()[loop].CropAdviceId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CropName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CropVarieties)
+                        </td>
+                    </tr>
+                    loop = loop + 1;
+                }
+                }
+            </table>
+            
+
+        </div>
+    }
+}    

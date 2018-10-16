@@ -32,5 +32,8 @@ namespace CropCalender.Models.EntityModels
 
         public int? LandTypeId { get; set; }
         public virtual LandType LandType { get; set; }
+
+        public int? SubDistrictId { get; set; }
+        public virtual SubDistrict SubDistrict { get; set; }
     }
 }

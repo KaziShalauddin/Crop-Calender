@@ -1,81 +1,128 @@
-﻿@model CropCalender.Models.EntityModels.CropAdvice
+﻿@model CropCalenderApp.ViewModels.CropAdviceViewModel
 
-@{
-    ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_LayoutDash.cshtml";
-    var areas = ViewBag.Areas;
-    
+    @{
+        ViewBag.Title = "Create";
+        Layout = "~/Views/Shared/_LayoutDash.cshtml";
+        var areas = ViewBag.Areas;
 
-}
 
-<h2 style="text-align: center">কৃষি ক্যালেন্ডার পর্যালোচনা</h2>
+    }
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
+    <h2 style="text-align: center">কৃষি ক্যালেন্ডার পর্যালোচনা</h2>
 
-        <hr />
-        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
-        <div class="col-md-6">
-            <div class="form-group">
-                @Html.Label("অঞ্চল নির্ধারণ", htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-7">
-                    @Html.DropDownList("AreaDD", new SelectList(areas, "Id", "AreaName"), "  নির্বাচন করুন  ", new { @class = "form-control" })
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            <hr />
+            @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.Label("অঞ্চল নির্ধারণ", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-7">
+                        @Html.DropDownList("AreaDD", new SelectList(areas, "Id", "AreaName"), "  নির্বাচন করুন  ", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("জেলা নির্ধারণ", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-7">
+                        @Html.DropDownList("DistrictDD", null, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("উপজেলা নির্ধারণ", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-7">
+                        @Html.DropDownList("SubDistrictDD", null, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("জমি নির্ধারণ", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-7">
+                        @Html.DropDownList("LandTypeId", null, "জমির ধরণ নির্বাচন করুন ", htmlAttributes: new { @class = "form-control" })
+                        @*@Html.ValidationMessageFor(model => model.LandTypeId, "", new { @class = "text-danger" })*@
+                    </div>
                 </div>
             </div>
             <div class="form-group">
-                @Html.Label("জেলা নির্ধারণ", htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-7">
-                    @Html.DropDownList("DistrictDD", null, new { @class = "form-control" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.Label("উপজেলা নির্ধারণ", htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-7">
-                    @Html.DropDownList("SubDistrictDD", null, new { @class = "form-control" })
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" id="btnSubmit" value="Create" class="btn btn-default" />
                 </div>
             </div>
 
+
+            <h3 style="text-align: center">পরামর্শ তালিকা</h3>
+
+            <div id="adviceListContainer">
+
+                <table class="table">
+                    <tr>
+                        <th>
+
+                        </th>
+                        <th>
+                            @Html.DisplayName("CropName")
+                        </th>
+                        <th>
+                            @Html.DisplayName("CropVarieties")
+                        </th>
+                    </tr>
+                </table>
+
+
+            </div>
+
             <div class="form-group">
-                @Html.Label("জমি নির্ধারণ", htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-7">
-                    @Html.DropDownList("LandTypeId", null, "জমির ধরণ নির্বাচন করুন ", htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.LandTypeId, "", new { @class = "text-danger" })
+                <div class="col-md-12">
+                    <input type="submit" value="দেখাও" style="float: right" class="btn btn-default" />
                 </div>
             </div>
+
         </div>
-        @*<div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+    }
+    @*<div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="jumbotron">
+                        <div id="commentListReplace">
+                            @Html.Partial("_CommentList", Model.CommentViewModels)
+                        </div>
+                        <div>
+
+                            @Html.Partial("_ReplayCommentPartial", Model.CommentViewModel)
+                        </div>
+                        <div>
+                            @Html.Partial("_CommentPartial", Model.CommentViewModel)
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>*@
-    </div>
-}
 
-@section scripts{
-    <script>
-        $(document).ready(function () {
 
+    @section scripts{
+        <script>
+        $(document).ready(function() {
+            //$('#container').hide();
             //Target District
-            $("#AreaDD").change(function () {
+            $("#AreaDD").change(function() {
                 var _areaId = $("#AreaDD").val();
                 var targetId = "#DistrictDD";
                 BindDivisionAndDistrict(_areaId, targetId);
             });
 
             //Target Subdistrict
-            $("#DistrictDD").change(function () {
+            $("#DistrictDD").change(function() {
                 var _districtId = $("#DistrictDD").val();
                 var targetId = "#SubDistrictDD";
                 BindDistrictAndSubDistrict(_districtId, targetId);
             });
 
-           
 
         });
-        
+
         function BindDivisionAndDistrict(_areaId, targetId) {
 
             var jsonData = { areaId: _areaId };
@@ -83,17 +130,17 @@
                 url: "/CropAdvices/GetByArea",
                 data: jsonData,
                 type: "POST",
-                success: function (response) {
+                success: function(response) {
                     $(targetId).empty();
 
                     var options = "<option>  নির্বাচন করুন  </option>";
                     $.each(response,
-                        function (key, district) {
+                        function(key, district) {
                             options += "<option value='" + district.Id + "'>" + district.DistrictName + "</option>";
                         });
                     $(targetId).append(options);
                 },
-                error: function (response) {
+                error: function(response) {
 
                 }
             });
@@ -106,22 +153,71 @@
                 url: "/CropAdvices/GetByDistrict",
                 data: jsonData,
                 type: "POST",
-                success: function (response) {
+                success: function(response) {
                     $(targetId).empty();
                     var options = "<option>  নির্বাচন করুন  </option>";
                     $.each(response,
-                        function (key, subDistrict) {
+                        function(key, subDistrict) {
                             options += "<option value='" + subDistrict.Id + "'>" + subDistrict.SubDistrictName + "</option>";
                         });
                     $(targetId).append(options);
                 },
-                error: function (response) {
+                error: function(response) {
 
                 }
             });
         }
 
-    </script>
-}
+        </script>
+        <script type="text/javascript">
+
+
+            $('#btnSubmit').click(function (event) {
+                debugger;
+                event.preventDefault();
+                //$('#container').show();
+                var _subDistrictId = $('#SubDistrictDD').val();
+                var _landTypeId = $('#LandTypeId').val();
+                if (_subDistrictId != '' && _landTypeId != '') {
+                    debugger;
+                   
+
+                    $.ajax({
+                        url: '@(Url.Action("AdviceList"))',
+                        //datatype: "json",
+                        data: { subDistrictId: _subDistrictId, landTypeId: _landTypeId },
+                        //cache: false,
+                        type: "POST",
+                        //dataType: "html",
+                       
+                        success: function (result) {
+                            debugger;
+                            //event.preventDefault();
+                            //alert(result.message);
+                            //$('#adviceListContainer').empty();
+                            $("#adviceListContainer").html(result);
+                           
+
+                        },
+                        error: function (result) {
+                            //alert(result.message);
+                        }
+
+                    });
+                }
+            });
+            //if (data.find("#ajax-status").val() === "success") {
+            //    $("#someDiv").html(data);
+            //}
+            //else {
+            //    showPopup("You do not have access to that.");
+            //}
+        </script>
+
+
+
+
+
+    }
 
 
